@@ -37,10 +37,28 @@ def main(request):
 ###################### Request to OpenWeather API
 def request_data(id, api_key):
     url = "https://api.openweathermap.org/data/2.5/weather?id={}&appid={}".format(id, api_key)
-    params = {"units": "imperial"} #units for returned temperature
+    params = {"units": "imperial"} # units for returned temperature
     weatherResponse = requests.get(url, params=params).json()
+    
+    # Clean Up Data From OpenWeather API Into New Python Dict
+    newobj = {
+        'longitude': weatherResponse['coord']['lon'],
+        'latitude': weatherResponse['coord']['lat'],
+        'description': weatherResponse['weather'][0]['description'],
+        'temperature': weatherResponse['main']['temp'],
+        'temp_feels_like': weatherResponse['main']['feels_like'],
+        'temperature_min': weatherResponse['main']['temp_min'],
+        'temperature_max': weatherResponse['main']['temp_max'],
+        'pressure': weatherResponse['main']['pressure'],
+        'humidity': weatherResponse['main']['humidity'],
+        'wind_speed': weatherResponse['wind']['speed'],
+        'dt': weatherResponse['dt'],
+        'city_name': weatherResponse['name']
+    }
+   
+    # Place Python Object Into Data Array
     data = []
-    data.append(weatherResponse)
+    data.append(newobj)
     return data
 
 
