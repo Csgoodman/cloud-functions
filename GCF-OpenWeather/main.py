@@ -9,7 +9,7 @@ import logging
 def main(request):
     try:
         # Parse incoming JSON request data to Python Dict
-        request = request.get_json() # {"apiKey": "e9ae407b3b45b2f4220e52d5995fbd6d"} passed into Secrets
+        request = request.get_json() # {"apiKey": "<key>"} passed into secrets
         
 
         # Get Authentication Details From Fivetran Request
