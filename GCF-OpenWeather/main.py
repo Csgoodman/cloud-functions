@@ -11,7 +11,6 @@ def main(request):
         # Parse incoming JSON request data to Python Dict
         request = request.get_json() # {"apiKey": "<key>"} passed into secrets
         
-
         # Get Authentication Details From Fivetran Request
         api_key = request['secrets']['apiKey']
 
