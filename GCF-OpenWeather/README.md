@@ -7,3 +7,6 @@ This is a Google Cloud Functions (GCF) example, utilizing the [Open Weather Map 
 
 # Open Weather Map API
 To change what location you are targeting with the Open Weather Map API, download **city.list.json.gz** and locate your desired city ID [here](http://bulk.openweathermap.org/sample/).
+
+# Open Weather Map API Key
+You can generate your own API key by going [here](https://home.openweathermap.org/api_keys) and creating a free account. This will be passed to the GCF via the **secrets** field in the Fivetran UI when setting up the cloud function connector.
