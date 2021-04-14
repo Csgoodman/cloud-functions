@@ -12,7 +12,7 @@ To change what location you are targeting with the Open Weather Map API, downloa
 Use the following format to pass the OpenWeather API Key to the Google Cloud Function:
 
 ``` json
-{"apiKey": "e9ae407b3b45b2f4220e52d5995fbd6d"}
+{"apiKey": "<api_key_value"}
 ```
 
 This will be passed to the GCF via the **secrets** field in the Fivetran UI when setting up the cloud function connector.
