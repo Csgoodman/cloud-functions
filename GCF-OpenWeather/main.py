@@ -77,14 +77,3 @@ def assemble_response(data, state):
     }
     # Convert to JSON From Python Dict and Return
     return json.dumps(response_dict) 
-
-
-
-
-#### TESTING ############
-# testing_data = request_data(5378538, "e9ae407b3b45b2f4220e52d5995fbd6d") # TESTING
-# print(testing_data)
-
-# state_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
-# testing_response = assemble_response(testing_data, state_time)
-# print(testing_response)
